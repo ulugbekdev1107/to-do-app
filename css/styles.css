@@ -1,3 +1,29 @@
+/* space-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/space-mono-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/space-mono-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/space-mono-v13-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('./fonts/space-mono-v13-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('./fonts/space-mono-v13-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url('./fonts/space-mono-v13-latin-regular.svg#SpaceMono') format('svg'); /* Legacy iOS */
+}
+/* space-mono-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/space-mono-v13-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/space-mono-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/space-mono-v13-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('./fonts/space-mono-v13-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url('./fonts/space-mono-v13-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url('./fonts/space-mono-v13-latin-700.svg#SpaceMono') format('svg'); /* Legacy iOS */
+}
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -12,12 +38,12 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  
+  --bg-fonts: 'Space Mono', monospace;
+  font-family: var(--bg-fonts);
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
@@ -68,29 +94,175 @@ select:-webkit-autofill:focus {
   overflow: hidden;
 }
 
+@media screen and (max-width:414px){
+  .to-do-active{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .modals{
+    width: 100%;
+    height: 539px;
+    background:#e3e3e2;
+    padding:10px 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: -1000px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+  }
+  .active-modals{
+    top:10px;
+  }
+  .modals-header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .modals-heading{
+    font-size: 34px;
+    text-transform: uppercase;
+    color:forestgreen;
+  }
+  .exit-btn{
+    background:transparent;
+    font-size: 34px;
+    padding:0px 10px;
+    border:none;
+  }
+  .exit-btn:hover{
+    
+    border:1px solid black;
+    background-color:red;
+    color:white;
+  }
+  .my-form{
+    height: 100%;
+    width: 100%;
+  }
+  .title{
+    font-family: var(--bg-fonts);
+    color:black;
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 12px;
+    border-radius: 15px;
+    border:none;
+    margin-bottom: 16px;
+  }
+  .textarea{
+    font-family: var(--bg-fonts);
+    width: 100%;
+    border-radius:15px;
+    height: 74px;
+    text-align: left;
+    padding: 10px 10px;
+    margin-bottom: 16px;
+    border:none;
+  }
+  .date{
+    font-family: var(--bg-fonts) ;
+    width: 100%;
+    padding: 12px 12px;
+    border-radius:15px;
+    border:none;
+    margin-bottom: 16px;
+  }
+  .select{
+    font-family: var(--bg-fonts);
+    width: 100%;
+    border-radius:15px;
+    border:none;
+    margin-bottom: 66px;
+    padding: 10px 10px;
+  }
+  .md-btn{
+    font-family: var(--bg-fonts);
+    width: 100%;
+    padding: 10px;
+    border:none;
+    border-radius:15px;
+    background-color: #2CB932;
+    color: white;
+  }
+  /* modals section */
+  /* btn style structura */
+  .btn{
+    background-color:#2CB932;
+    width: 72px;
+    height: 72px;
+    font-size: 35px;
+    color: white;
+    border-radius:50%;
+    border:none;
+    position: fixed;
+    bottom:140px;
+    left: 163px;
+  }
+  .btn-pulse{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
 
-/* CONTAINER */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .header{
+    width: 100%;
+    height: 160px;
+  }
+  .heading-bottom{
+    text-align:center;
+    font-size: 45px;
+    color:black;
+    margin: 0px;
+  }
+  .nav-btn{
+    border:none;
+    background:transparent;
+  }
+  .nav-btn:hover{
+    border:1px solid #2CB932;
+  }
+  .nav-btn:focus{
+    border:1px solid black;
+    background:#2CB932;
+  }
+  .navbar{
+    background:black;
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    left: -400px;
+  }
+  .navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    list-style-type: none;
+  }
+  .navbar-item{
+  }
+  .main{
 
-
-/* MAIN-CONTENT */
-.main-content {
-  flex-grow: 1;
-}
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
+  }
+  .success{
+    background-color:#9FE3E8;
+  }
+  .danger{
+    background-color: #F4A4A9;
+  }
+  .section-app{
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+    border-radius :15px;
+  }
+  h4{
+    margin: 0px;
+  }
+  .app-foot{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
 
 }
