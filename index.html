@@ -2,108 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To Do App</title>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/normalize.css">
+  <title>Todo App</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div class="container">
+    
   <div class="modals">
     <div class="modals-header">
       <h2 class="modals-heading">Yangi topshiriq</h2>
-      <button class="exit-btn" onclick="btnRemove()">x</button>
     </div>
-    <form action="#" class="my-form">
-      <label class="mb-25">
-        <input class="title" type="text" name="title" id="title" placeholder="Topshiriq sarlavhasi">
-      </label>
-      <label class="mb-25">
-        <textarea class="textarea" name="text" id="text">Topshiriq matni
-        </textarea>
-      </label>
-      <label class="mb-25">
-        <input class="date" type="date" name="date" id="date">
-      </label>
-      <label>
-      <select class="select">
-        <option value="name">Guruh a’zosi</option>
-        <option value="">A'zo bo'lmagan</option>
-      </select>
-      </label>
-      <button onclick="btnPush" class="md-btn">Qo’shish</button>
-    </form>
+    <div class="modals-main">
+      <div class="mb-25">
+        <input type="text" name="title" id="title" placeholder="Topshiriq sarlavhasi">
+      </div>
+      <div class="mb-25">
+        <textarea name="comment" id="comment" cols="30" rows="10">Topshiriq matni</textarea>
+      </div>
+      <div class="mb-25">
+        <input type="date" name="date" id="date">
+      </div>
+      <div class="mb-25">
+        <select name="members" id="members">
+          <option value="members">Guruh a’zosi</option>
+          <option value="members">Guruh a’zosi emas</option>
+        </select>
+      </div>
+      <div class="mb-25">
+        <button class="btn-save" onclick="btnSaveData()">Saqlash</button>
+      </div>
+
+    </div>
   </div>
-    <div class="to-do-active">
-     
-      <button onclick="btnModals()" class="btn btn-pulse">+</button>
-      <header class="header">
-        <h2 class="heading-bottom">
-          TodoList 
-        </h2>
-        <button class="nav-btn btn-nd">
-          <img width="40px" src="./img/filter.png" alt="filter">
-        </button>
-        <nav class="navbar" >
-          <ol class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-btn">
-                Barchasi
-              </button>
-            </li>
-            <li class="navbar-item">
-              <button class="navbar-btn">
-                Bajarilganlar
-              </button>
-            </li>
-            <li class="navbar-item">
-              <button class="navbar-btn">
-                Bajarilmaganlar
-              </button>
-            </li>
-          </ol>
-        </nav>
+  <main class="main">
+    <section class="app-card warn">
+      <header>
+        <h4 class="card-heading">Design LMS system</h4>
       </header>
-      <main class="main">
-        <section class="section-app success">
-          <h4>Design LMS system</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, itaque. Maxime hic aut vel?</p>
-          <div class="app-foot">
-            <time>08.02.2021</time>
-            <strong>Ochilov J.</strong>
-          </div>
-        </section>
-        <section class="section-app danger">
-          <h4>Design LMS system</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, itaque. Maxime hic aut vel?</p>
-          <div class="app-foot">
-            <time>08.02.2021</time>
-            <strong>Ochilov J.</strong>
-          </div>
-        </section>
-        <section class="section-app success">
-          <h4>Design LMS system</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, itaque. Maxime hic aut vel?</p>
-          <div class="app-foot">
-            <time>08.02.2021</time>
-            <strong>Ochilov J.</strong>
-          </div>
-        </section>
-        <section class="section-app danger">
-          <h4>Design LMS system</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, itaque. Maxime hic aut vel?</p>
-          <div class="app-foot">
-            <time>08.02.2021</time>
-            <strong>Ochilov J.</strong>
-          </div>
-        </section>
+      <main>
+        <p class="card-paragriph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
+        </p>
       </main>
+      <footer>
+        <time>08.02.2021</time>
+        <strong>Ochilov J.</strong>
+      </footer>
+    </section>
+    <!-- section end -->
+    <section class="app-card danger">
+      <header>
+        <h4 class="card-heading">Design LMS system</h4>
+      </header>
+      <main>
+        <p class="card-paragriph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
+        </p>
+      </main>
+      <footer>
+        <time>08.02.2021</time>
+        <strong>Ochilov J.</strong>
+      </footer>
+    </section>
+    <!--section end  -->
+    <section class="app-card warn">
+      <header>
+        <h4 class="card-heading">Design LMS system</h4>
+      </header>
+      <main>
+        <p class="card-paragriph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
+        </p>
+      </main>
+      <footer>
+        <time>08.02.2021</time>
+        <strong>Ochilov J.</strong>
+      </footer>
+    </section>
+    <!-- section end -->
+    <section class="app-card danger">
+      <header>
+        <h4 class="card-heading">Design LMS system</h4>
+      </header>
+      <main>
+        <p class="card-paragriph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
+        </p>
+      </main>
+      <footer>
+        <time>08.02.2021</time>
+        <strong>Ochilov J.</strong>
+      </footer>
+    </section>
+  </main>
 
+  <button class="btn" onclick="btnModals()">+</button>
 
-    </div>
-
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>

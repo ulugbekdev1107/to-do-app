@@ -1,268 +1,111 @@
-/* space-mono-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/space-mono-v13-latin-regular.eot'); /* IE9 Compat Modes */
-  src: url('./fonts/space-mono-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/space-mono-v13-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('./fonts/space-mono-v13-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-       url('./fonts/space-mono-v13-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-       url('./fonts/space-mono-v13-latin-regular.svg#SpaceMono') format('svg'); /* Legacy iOS */
-}
-/* space-mono-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 700;
-  src: url('./fonts/space-mono-v13-latin-700.eot'); /* IE9 Compat Modes */
-  src: url('./fonts/space-mono-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/space-mono-v13-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('./fonts/space-mono-v13-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-       url('./fonts/space-mono-v13-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-       url('./fonts/space-mono-v13-latin-700.svg#SpaceMono') format('svg'); /* Legacy iOS */
-}
-/* GLOBAL */
-html {
-  box-sizing: border-box;
-  height: 100%;
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  
-  --bg-fonts: 'Space Mono', monospace;
-  font-family: var(--bg-fonts);
-  height: 100%;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap');
+*{
   margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* AUTOFILL-STYLES */
-/*input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border-color: transparent;
-  -webkit-text-fill-color: inherit;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-}*/
-
-
-/* PLACEHOLDER-STYLES */
-/*::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder,
-:-moz-placeholder {
-  color: rgba(52, 49, 61, 0.5);
-  opacity: 1;
-}*/
-
-
-/* VISUALLY-HIDDEN */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
   padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  box-sizing: border-box;
 }
+body{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+
 
 @media screen and (max-width:414px){
-  .to-do-active{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .modals{
-    width: 100%;
-    height: 539px;
-    background:#e3e3e2;
-    padding:10px 20px;
-    border-radius: 10px;
-    position: fixed;
-    top: -1000px;
-    left: 0px;
-    right: 0px;
-    z-index: 1;
-  }
-  .active-modals{
-    top:10px;
-  }
-  .modals-header{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-  }
-  .modals-heading{
-    font-size: 34px;
-    text-transform: uppercase;
-    color:forestgreen;
-  }
-  .exit-btn{
-    background:transparent;
-    font-size: 34px;
-    padding:0px 10px;
-    border:none;
-  }
-  .exit-btn:hover{
-    
-    border:1px solid black;
-    background-color:red;
-    color:white;
-  }
-  .my-form{
-    height: 100%;
-    width: 100%;
-  }
-  .title{
-    font-family: var(--bg-fonts);
-    color:black;
-    width: 100%;
-    padding: 12px 12px;
-    font-size: 12px;
-    border-radius: 15px;
-    border:none;
-    margin-bottom: 16px;
-  }
-  .textarea{
-    font-family: var(--bg-fonts);
-    width: 100%;
-    border-radius:15px;
-    height: 74px;
-    text-align: left;
-    padding: 10px 10px;
-    margin-bottom: 16px;
-    border:none;
-  }
-  .date{
-    font-family: var(--bg-fonts) ;
-    width: 100%;
-    padding: 12px 12px;
-    border-radius:15px;
-    border:none;
-    margin-bottom: 16px;
-  }
-  .select{
-    font-family: var(--bg-fonts);
-    width: 100%;
-    border-radius:15px;
-    border:none;
-    margin-bottom: 66px;
-    padding: 10px 10px;
-  }
-  .md-btn{
-    font-family: var(--bg-fonts);
-    width: 100%;
-    padding: 10px;
-    border:none;
-    border-radius:15px;
-    background-color: #2CB932;
-    color: white;
-  }
-  /* modals section */
-  /* btn style structura */
-  .btn{
-    background-color:#2CB932;
-    width: 72px;
-    height: 72px;
-    font-size: 35px;
-    color: white;
-    border-radius:50%;
-    border:none;
-    position: fixed;
-    bottom:140px;
-    left: 163px;
-  }
-  .btn-pulse{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-  }
-
-  .header{
-    width: 100%;
-    height: 160px;
-  }
-  .heading-bottom{
-    text-align:center;
-    font-size: 45px;
-    color:black;
+  body{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 18px;
     margin: 0px;
+    padding: 0px;
   }
-  .nav-btn{
-    border:none;
-    background:transparent;
+  .container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
-  .nav-btn:hover{
-    border:1px solid #2CB932;
-  }
-  .nav-btn:focus{
-    border:1px solid black;
-    background:#2CB932;
-  }
-  .navbar{
-    background:black;
-    width: 100%;
-    height: 800px;
-    position: fixed;
-    left: -400px;
-  }
-  .navbar-list{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    list-style-type: none;
-  }
-  .navbar-item{
-  }
-  .main{
+.modals{
 
-  }
-  .success{
-    background-color:#9FE3E8;
-  }
-  .danger{
-    background-color: #F4A4A9;
-  }
-  .section-app{
-    width: 100%;
-    padding: 10px 10px;
-    margin-bottom: 30px;
-    border-radius :15px;
-  }
-  h4{
-    margin: 0px;
-  }
-  .app-foot{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-  }
+  width:375px;
+  padding: 20px;
+  border-radius:10px;
+  background-color:black;
+  position: fixed;
+  z-index: 1;
+  top:-1000px;
+}
 
+.modals.active{
+  top: 60px;
+  transition: .5s ease-in-out;
+}
+.modals-heading{
+  color:white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.btn{
+  width: 72px;
+  height: 72px;
+  border-radius:50%;
+  font-size: 34px;
+  color:white;
+  background-color: #2CB932;
+  ;
+  position: fixed;
+  top:590px;
+  bottom:0;
+  border:none;
+  left: 154px;
+
+}
+.mb-25{
+  margin-bottom: 15px;
+}
+input, textarea, select{
+  width: 100%;
+  padding: 10px 10px;
+  border:1px solid blue;
+  border-radius:15px;
+}
+.btn-save{
+  background-color:#2CB932;
+  color:white;
+  border:none;
+  border-radius:15px;
+  padding: 12px 18px;
+  width:100%;
+  font-size: 20px;
+
+}
+.warn{
+  background-color:#9FE3E8;
+}
+.danger{
+  background: #F4A4A9;
+}
+.app-card{
+  width: 100%;
+  height: 250px;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+
+}
+h4{
+  margin-bottom: 20px;
+  font-size:26px;
+}
+p{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
 }
