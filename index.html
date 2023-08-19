@@ -18,10 +18,10 @@
         <input type="text" name="title" id="title" placeholder="Topshiriq sarlavhasi">
       </div>
       <div class="mb-25">
-        <textarea name="comment" id="comment" cols="30" rows="10">Topshiriq matni</textarea>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Describe yourself here..."></textarea>
       </div>
       <div class="mb-25">
-        <input type="date" name="date" id="date">
+        <input type="date" name="date" id="date" placeholder="Sanani kiriting">
       </div>
       <div class="mb-25">
         <select name="members" id="members">
@@ -30,71 +30,16 @@
         </select>
       </div>
       <div class="mb-25">
-        <button class="btn-save" onclick="btnSaveData()">Saqlash</button>
+        <button class="btn-save" onclick="createNewList()">Saqlash</button>
+        <input type= "button" onclick= "clearInput()" value= "Clear modals-main">
       </div>
 
     </div>
   </div>
   <main class="main">
-    <section class="app-card warn">
-      <header>
-        <h4 class="card-heading">Design LMS system</h4>
-      </header>
-      <main>
-        <p class="card-paragriph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
-        </p>
-      </main>
-      <footer>
-        <time>08.02.2021</time>
-        <strong>Ochilov J.</strong>
-      </footer>
-    </section>
-    <!-- section end -->
-    <section class="app-card danger">
-      <header>
-        <h4 class="card-heading">Design LMS system</h4>
-      </header>
-      <main>
-        <p class="card-paragriph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
-        </p>
-      </main>
-      <footer>
-        <time>08.02.2021</time>
-        <strong>Ochilov J.</strong>
-      </footer>
-    </section>
-    <!--section end  -->
-    <section class="app-card warn">
-      <header>
-        <h4 class="card-heading">Design LMS system</h4>
-      </header>
-      <main>
-        <p class="card-paragriph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
-        </p>
-      </main>
-      <footer>
-        <time>08.02.2021</time>
-        <strong>Ochilov J.</strong>
-      </footer>
-    </section>
-    <!-- section end -->
-    <section class="app-card danger">
-      <header>
-        <h4 class="card-heading">Design LMS system</h4>
-      </header>
-      <main>
-        <p class="card-paragriph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada eget aliquet eget.
-        </p>
-      </main>
-      <footer>
-        <time>08.02.2021</time>
-        <strong>Ochilov J.</strong>
-      </footer>
-    </section>
+    <div class="app-card">
+
+    </div>
   </main>
 
   <button class="btn" onclick="btnModals()">+</button>
